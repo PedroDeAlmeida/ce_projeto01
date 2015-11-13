@@ -18,6 +18,24 @@
             integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
             crossorigin="anonymous"></script>
 
-    <h1>Index</h1>
+
+    <?php require_once('navbar.php'); ?>
+
+    <br><br>
+
+    <div class="container">
+
+        <?
+            $conteudo = $_GET['conteudo'];
+            $conteudosValidos = ['home','empresa','produtos','servicos','contato'];
+
+            if(in_array($conteudo,$conteudosValidos)){
+                require_once($conteudo.".php");
+            }else{
+                require_once('home.php');
+            }
+        ?>
+
+    </div>
 </body>
 </html>
