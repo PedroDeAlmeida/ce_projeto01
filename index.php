@@ -27,7 +27,7 @@
 
         <?
             $conteudo = $_GET['conteudo'];
-            $conteudosValidos = ['home','empresa','produtos','servicos','contato'];
+            $conteudosValidos = ['home','empresa','produtos','servicos','contato','mostracontato'];
 
             if(in_array($conteudo,$conteudosValidos)){
                 require_once($conteudo.".php");
