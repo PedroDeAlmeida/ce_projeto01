@@ -1,6 +1,6 @@
 <h1>Contato</h1>
 
-<form name="formulario" role="form" method="post" action="index.php?conteudo=mostracontato">
+<form name="formulario" role="form" method="post" action="mostracontato">
     <div class="form-group">
         <label for="nome">Nome:</label>
         <input type="text" class="form-control" name="nome">

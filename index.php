@@ -1,16 +1,14 @@
 <?php
     require_once('func.php');
-    require_once('header.php');
 
     $rota = qualRota();
-
-    if(rotaValida($rota)){
-        require_once($rota.".php");
-    }else{
-        require_once('home.php');
+    if(!rotaValida($rota)){
+        http_response_code(500);
+        die;
     }
 
+    require_once('header.php');
+    require_once($rota.".php");
     require_once('footer.php');
-
 ?>
 
