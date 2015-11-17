@@ -3,6 +3,7 @@
 
     $rota = qualRota();
     if(!rotaValida($rota)){
+        //http_response_code(404);
         http_response_code(500);
         die;
     }
