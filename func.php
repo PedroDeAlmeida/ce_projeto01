@@ -14,4 +14,3 @@
         $rota = substr($rota['path'],1);
         return $rota;
     }
-?>
