@@ -1,15 +1,13 @@
 </div>
 
-<br><br>
+<div class="container text-center">
 
-<center>
-    <p>
+    <p class="text-muted">
         <?php
         date_default_timezone_set('UTC');
         echo "Todos os direitos reservados - ".date('Y');
         ?>
     </p>
-</center>
-
+</div>
 </body>
 </html>
