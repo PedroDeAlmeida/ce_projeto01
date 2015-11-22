@@ -12,5 +12,10 @@
     function qualRota(){
         $rota = parse_url("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
         $rota = substr($rota['path'],1);
+
+        if (empty($rota)){
+            $rota = 'home';
+        }
+
         return $rota;
     }
