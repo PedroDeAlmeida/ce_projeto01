@@ -2,7 +2,7 @@
     function rotaValida($rota){
         $rotasValidas = ['home','empresa','produtos','servicos','contato','mostracontato'];
 
-        if(in_array($rota,$rotasValidas)){
+        if(in_array($rota,$rotasValidas) && arquivoExiste($rota)){
             return true;
         }else{
             return false;
@@ -18,4 +18,11 @@
         }
 
         return $rota;
+    }
+
+    function arquivoExiste($rota){
+        $dir_base = getcwd();
+        $arquivo = $dir_base."\\"."$rota".".php";
+
+        return file_exists($arquivo);
     }

@@ -3,7 +3,7 @@
 $form = filter_input_array(INPUT_POST);
 
 if(!empty($form)) {
-    include 'formEnviado.php';
+    require_once('formEnviado.php');
 } else {
-    include 'formContato.php';
+    require_once('formContato.php');
 }
